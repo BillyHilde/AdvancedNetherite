@@ -54,16 +54,16 @@
   "item.advancednetherite.netherite_emerald_sword": "Kiếm Netherit Ngọc Lục Bảo",
   "item.advancednetherite.netherite_diamond_sword": "Kiếm Netherit Kim Cương",
 
-  "item.advancednetherite.netherite_iron_spear": "Netherite-Iron Spear",
-  "item.advancednetherite.netherite_gold_spear": "Netherite-Gold Spear",
-  "item.advancednetherite.netherite_emerald_spear": "Netherite-Emerald Spear",
-  "item.advancednetherite.netherite_diamond_spear": "Netherite-Diamond Spear",
+  "item.advancednetherite.netherite_iron_spear": "Giáo Netherit Sắt",
+  "item.advancednetherite.netherite_gold_spear": "Giáo Netherit Vàng",
+  "item.advancednetherite.netherite_emerald_spear": "Giáo Netherit Ngọc Lục Bảo",
+  "item.advancednetherite.netherite_diamond_spear": "Giáo Netherit Kim Cương",
 
   "itemGroup.advancednetherite.tab": "Đồ Netherit Nâng Cao",
 
   "tooltip.advancednetherite.armor.enderman_passive": "%s Giúp không chọc tức Người Ender khi nhìn",
   "tooltip.advancednetherite.armor.piglin_passive": "%s Giúp tránh khỏi sự tấn công của Piglin",
-  "tooltip.advancednetherite.armor.phantom_passive": "%s Giúp tránh khỏi sự tấn công của Phantom",
+  "tooltip.advancednetherite.armor.phantom_passive": "%s Giúp tránh khỏi sự truy đuổi của Phantom",
 
   "tooltip.advancednetherite.hoe.additional_crop_drops": "%s Có tỉ lệ rơi ra thêm cây trồng khi thu hoạch cây trồng trưởng thành",
 
@@ -77,15 +77,15 @@
   "tooltip.advancednetherite.sword.additional_zombified_piglin_mob_drop": "%s Có tỉ lệ rơi ra thêm Hạt Vàng khi giết Piglin Thây Ma",
   "tooltip.advancednetherite.sword.additional_phantom_mob_drop": "%s Có tỉ lệ rơi ra thêm Màng da Phantom khi giết Phantom",
 
-  "tooltip.advancednetherite.misc.press_shift_key": "Giữ %s để xem mô tả khả năng đặc biệt",
+  "tooltip.advancednetherite.misc.press_shift_key": "Giữ %s để xem chi tiết khả năng đặc biệt",
   "tooltip.advancednetherite.misc.shift": "[SHIFT]",
   "tooltip.advancednetherite.misc.plus": "+",
 
-  "advancements.advancednetherite.husbandry.netherite_diamond_hoe.title": "Tại sao chứ?",
+  "advancements.advancednetherite.husbandry.netherite_diamond_hoe.title": "Tại sao chứ, tại sao?",
   "advancements.advancednetherite.husbandry.netherite_diamond_hoe.description": "Chế tạo Cuốc Netherit Kim Cương rồi sau đó đi điều trị tâm lí.",
-  "advancements.advancednetherite.nether.netherite_iron_armor.title": "Phantom là bọn đếch nào?",
+  "advancements.advancednetherite.nether.netherite_iron_armor.title": "Phantom? Tưởng tao sợ à?",
   "advancements.advancednetherite.nether.netherite_iron_armor.description": "Có đầy đủ trang bị Netherit Sắt ",
-  "advancements.advancednetherite.nether.netherite_gold_armor.title": "Sáng chói hơn cả vàng",
+  "advancements.advancednetherite.nether.netherite_gold_armor.title": "Chói hơn vàng",
   "advancements.advancednetherite.nether.netherite_gold_armor.description": "Có đầy đủ trang bị Netherit Vàng",
   "advancements.advancednetherite.nether.netherite_emerald_armor.title": "Endermen?",
   "advancements.advancednetherite.nether.netherite_emerald_armor.description": "Có đầy đủ trang bị Netherit Ngọc Lục Bảo",
@@ -96,10 +96,10 @@
   "advancements.advancednetherite.nether.obtain_netherite_diamond_block.title": "Một khối cực đắt đỏ",
   "advancements.advancednetherite.nether.obtain_netherite_diamond_block.description": "Sở hữu 1 Khối Netherit Kim Cương",
 
-  "config.advancednetherite.client": "Thông Số Máy Trạm",
-  "config.advancednetherite.client.show_tooltips": "Show tooltips added by this mod",
+  "config.advancednetherite.client": "Thông Số Cá Nhân",
+  "config.advancednetherite.client.show_tooltips": "Hiển thị tooltip được thêm vào mod",
   "config.advancednetherite.client.matching_durability_bars": "Display a matching durability bar color underneath the item",
-  "config.advancednetherite.client.enable_search_bar": "Enable search bar in Advanced Netherite creative tab",
+  "config.advancednetherite.client.enable_search_bar": "Bật thanh tìm kiếm của Advanced Netherite trong tab sáng tạo",
   "config.advancednetherite.client.force_disable_dab_support": "Forcefully disable Detail Armor Bar (mod) support",
 
   "config.advancednetherite.common": "Thông số chung",
