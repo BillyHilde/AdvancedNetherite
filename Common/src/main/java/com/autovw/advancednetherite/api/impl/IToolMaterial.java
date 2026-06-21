@@ -30,7 +30,8 @@ public interface IToolMaterial
     }
 
     /**
-     * @since MC 1.21.5
+     * Advanced Netherite's version of keeping track of tool types in Java without relying on item tags.
+     * @since Minecraft 1.21.5
      */
     enum Type
     {
@@ -38,6 +39,10 @@ public interface IToolMaterial
         HOE,
         PICKAXE,
         SHOVEL,
-        SWORD;
+        SWORD,
+        /**
+         * @since Minecraft 26.2 - Advanced Netherite 2.4.2
+         */
+        SPEAR;
     }
 }
