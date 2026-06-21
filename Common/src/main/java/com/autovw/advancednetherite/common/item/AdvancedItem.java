@@ -1,9 +1,11 @@
 package com.autovw.advancednetherite.common.item;
 
 import com.autovw.advancednetherite.api.annotation.Internal;
+import com.autovw.advancednetherite.api.impl.IDurabilityBarColorModifier;
+import com.autovw.advancednetherite.common.AdvancedUtil;
 import com.autovw.advancednetherite.config.ConfigHelper;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -15,7 +17,7 @@ import java.util.function.Consumer;
 /**
  * @author Autovw
  */
-public class AdvancedItem extends Item
+public class AdvancedItem extends Item implements IDurabilityBarColorModifier
 {
     public AdvancedItem(Properties properties)
     {
@@ -34,16 +36,10 @@ public class AdvancedItem extends Item
     {
     }
 
-    /**
-     * {@link Override} this method if you want to give your item a custom durability bar color.
-     * Feature is disabled by default, can be enabled in Advanced Netherite's Client config.
-     *
-     * @param stack The item stack
-     * @return The custom durability bar color
-     */
-    public ChatFormatting customDurabilityBarColor(ItemStack stack)
+    @Override
+    public int durabilityBarColorModifier(int originalColor, ItemStack stack)
     {
-        return null;
+        return AdvancedUtil.getDurabilityBarColor(originalColor, stack);
     }
 
     /* ================ INTERNAL, use alternatives linked in javadoc ================ */
@@ -62,12 +58,13 @@ public class AdvancedItem extends Item
     }
 
     /**
-     * Don't override this method, use {@link AdvancedItem#customDurabilityBarColor(ItemStack)} to change the custom durability bar color.
+     * Don't override this method, use {@link AdvancedItem#durabilityBarColorModifier(int, ItemStack)} to change the custom durability bar color.
      */
     @Internal
     @Override
     public int getBarColor(ItemStack stack)
     {
-        return customDurabilityBarColor(stack) != null && ConfigHelper.get().getClient().matchingDurabilityBars() ? Objects.requireNonNull(customDurabilityBarColor(stack).getColor()) : super.getBarColor(stack);
+        int originalColor = super.getBarColor(stack);
+        return ConfigHelper.get().getClient().matchingDurabilityBars() ? this.durabilityBarColorModifier(originalColor, stack) : originalColor;
     }
 }

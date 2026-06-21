@@ -1,5 +1,6 @@
 package com.autovw.advancednetherite.common;
 
+import com.autovw.advancednetherite.api.annotation.Internal;
 import com.autovw.advancednetherite.api.impl.IAdvancedHooks;
 import com.autovw.advancednetherite.api.impl.IArmorMaterial;
 import com.autovw.advancednetherite.api.impl.IToolMaterial;
@@ -8,12 +9,15 @@ import com.autovw.advancednetherite.config.ConfigHelper;
 import com.autovw.advancednetherite.core.util.ModArmorMaterials;
 import com.autovw.advancednetherite.core.util.ModToolMaterials;
 import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Style;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Objects;
 
 /**
  * @author Autovw
@@ -54,30 +58,36 @@ public class AdvancedUtil
             if (stack.getItem() instanceof IToolMaterial material)
             {
                 if (material.isMaterial(ModToolMaterials.NETHERITE_IRON))
-                    newColor = ChatFormatting.GRAY.getColor();
+                    newColor = getColor(ChatFormatting.GRAY);
                 if (material.isMaterial(ModToolMaterials.NETHERITE_GOLD))
-                    newColor = ChatFormatting.GOLD.getColor();
+                    newColor = getColor(ChatFormatting.GOLD);
                 if (material.isMaterial(ModToolMaterials.NETHERITE_EMERALD))
-                    newColor = ChatFormatting.DARK_GREEN.getColor();
+                    newColor = getColor(ChatFormatting.DARK_GREEN);
                 if (material.isMaterial(ModToolMaterials.NETHERITE_DIAMOND))
-                    newColor = ChatFormatting.AQUA.getColor();
+                    newColor = getColor(ChatFormatting.AQUA);
             }
 
             // Armor
             if (stack.getItem() instanceof IArmorMaterial material)
             {
                 if (material.isMaterial(ModArmorMaterials.NETHERITE_IRON))
-                    newColor = ChatFormatting.GRAY.getColor();
+                    newColor = getColor(ChatFormatting.GRAY);
                 if (material.isMaterial(ModArmorMaterials.NETHERITE_GOLD))
-                    newColor = ChatFormatting.GOLD.getColor();
+                    newColor = getColor(ChatFormatting.GOLD);
                 if (material.isMaterial(ModArmorMaterials.NETHERITE_EMERALD))
-                    newColor = ChatFormatting.DARK_GREEN.getColor();
+                    newColor = getColor(ChatFormatting.DARK_GREEN);
                 if (material.isMaterial(ModArmorMaterials.NETHERITE_DIAMOND))
-                    newColor = ChatFormatting.AQUA.getColor();
+                    newColor = getColor(ChatFormatting.AQUA);
             }
         }
 
         return newColor;
+    }
+
+    @Internal
+    private static int getColor(ChatFormatting color)
+    {
+        return Objects.requireNonNull(Style.EMPTY.withColor(color).getColor()).getValue();
     }
 
     /**

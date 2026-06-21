@@ -1,11 +1,12 @@
 package com.autovw.advancednetherite.common.item;
 
 import com.autovw.advancednetherite.api.annotation.Internal;
+import com.autovw.advancednetherite.api.impl.IDurabilityBarColorModifier;
 import com.autovw.advancednetherite.api.impl.IToolMaterial;
 import com.autovw.advancednetherite.common.AdvancedUtil;
 import com.autovw.advancednetherite.config.ConfigHelper;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.state.BlockState;
@@ -16,7 +17,7 @@ import java.util.function.Consumer;
 /**
  * @author Autovw
  */
-public class AdvancedShovelItem extends ShovelItem implements IToolMaterial
+public class AdvancedShovelItem extends ShovelItem implements IToolMaterial, IDurabilityBarColorModifier
 {
     private final ToolMaterial material;
 
@@ -38,16 +39,10 @@ public class AdvancedShovelItem extends ShovelItem implements IToolMaterial
     {
     }
 
-    /**
-     * {@link Override} this method if you want to give your item a custom durability bar color.
-     * Feature is disabled by default, can be enabled in Advanced Netherite's Client config.
-     *
-     * @param stack The item stack
-     * @return The custom durability bar color
-     */
-    public ChatFormatting customDurabilityBarColor(ItemStack stack)
+    @Override
+    public int durabilityBarColorModifier(int originalColor, ItemStack stack)
     {
-        return null;
+        return AdvancedUtil.getDurabilityBarColor(originalColor, stack);
     }
 
     /* ================ INTERNAL, use alternatives linked in javadoc ================ */
@@ -66,20 +61,14 @@ public class AdvancedShovelItem extends ShovelItem implements IToolMaterial
     }
 
     /**
-     * Don't override this method, use {@link AdvancedShovelItem#customDurabilityBarColor(ItemStack)} to change the custom durability bar color.
+     * Don't override this method, use {@link AdvancedShovelItem#durabilityBarColorModifier(int, ItemStack)} to change the custom durability bar color.
      */
     @Internal
     @Override
     public int getBarColor(ItemStack stack)
     {
         int originalColor = super.getBarColor(stack);
-
-        if (customDurabilityBarColor(stack) != null && ConfigHelper.get().getClient().matchingDurabilityBars())
-        {
-            return Objects.requireNonNull(customDurabilityBarColor(stack).getColor());
-        }
-
-        return AdvancedUtil.getDurabilityBarColor(originalColor, stack);
+        return ConfigHelper.get().getClient().matchingDurabilityBars() ? this.durabilityBarColorModifier(originalColor, stack) : originalColor;
     }
 
     @Override

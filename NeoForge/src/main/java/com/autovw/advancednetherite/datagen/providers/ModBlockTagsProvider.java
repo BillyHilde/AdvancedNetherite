@@ -25,10 +25,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider
         /* Mod Tags */
         tag(ModTags.NETHERITE_BLOCKS)
                 .add(
-                        ModBlocks.NETHERITE_IRON_BLOCK,
-                        ModBlocks.NETHERITE_GOLD_BLOCK,
-                        ModBlocks.NETHERITE_EMERALD_BLOCK,
-                        ModBlocks.NETHERITE_DIAMOND_BLOCK
+                        ModBlocks.NETHERITE_IRON_BLOCK.builtInRegistryHolder().getKey(),
+                        ModBlocks.NETHERITE_GOLD_BLOCK.builtInRegistryHolder().getKey(),
+                        ModBlocks.NETHERITE_EMERALD_BLOCK.builtInRegistryHolder().getKey(),
+                        ModBlocks.NETHERITE_DIAMOND_BLOCK.builtInRegistryHolder().getKey()
                 );
 
         tag(ModTags.INCORRECT_FOR_NETHERITE_IRON_TOOL).addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
@@ -43,6 +43,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider
 
         tag(BlockTags.BEACON_BASE_BLOCKS).addTag(ModTags.NETHERITE_BLOCKS);
 
-        tag(BlockTags.GUARDED_BY_PIGLINS).add(ModBlocks.NETHERITE_GOLD_BLOCK);
+        tag(BlockTags.GUARDED_BY_PIGLINS).add(ModBlocks.NETHERITE_GOLD_BLOCK.builtInRegistryHolder().getKey());
     }
 }

@@ -7,7 +7,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypeIds;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -50,19 +50,19 @@ public class MobDropsLootModifier extends LootModifier
             ItemStack useItem = player.getMainHandItem(); // used to check if the player uses the correct weapon
             RandomSource random = context.getRandom(); // random generator
 
-            if (useItem.is(ModTags.DROPS_ADDITIONAL_PHANTOM_LOOT) && victim.getType() == EntityType.PHANTOM && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalPhantomDropChance())
+            if (useItem.is(ModTags.DROPS_ADDITIONAL_PHANTOM_LOOT) && victim.is(EntityTypeIds.PHANTOM) && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalPhantomDropChance())
             {
                 generatedLoot.add(new ItemStack(Items.PHANTOM_MEMBRANE, random.nextIntBetweenInclusive(0, 2)));
             }
-            if (useItem.is(ModTags.DROPS_ADDITIONAL_ZOMBIFIED_PIGLIN_LOOT) && victim.getType() == EntityType.ZOMBIFIED_PIGLIN && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalZombifiedPiglinDropChance())
+            if (useItem.is(ModTags.DROPS_ADDITIONAL_ZOMBIFIED_PIGLIN_LOOT) && victim.is(EntityTypeIds.ZOMBIFIED_PIGLIN) && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalZombifiedPiglinDropChance())
             {
                 generatedLoot.add(new ItemStack(Items.GOLD_NUGGET, random.nextIntBetweenInclusive(0, 3)));
             }
-            if (useItem.is(ModTags.DROPS_ADDITIONAL_PIGLIN_LOOT) && victim.getType() == EntityType.PIGLIN && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalPiglinDropChance())
+            if (useItem.is(ModTags.DROPS_ADDITIONAL_PIGLIN_LOOT) && victim.is(EntityTypeIds.PIGLIN) && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalPiglinDropChance())
             {
                 generatedLoot.add(new ItemStack(Items.GOLD_INGOT, random.nextIntBetweenInclusive(1, 1)));
             }
-            if (useItem.is(ModTags.DROPS_ADDITIONAL_ENDERMAN_LOOT) && victim.getType() == EntityType.ENDERMAN && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalEndermanDropChance())
+            if (useItem.is(ModTags.DROPS_ADDITIONAL_ENDERMAN_LOOT) && victim.is(EntityTypeIds.ENDERMAN) && random.nextFloat() <= ConfigHelper.get().getServer().getAdditionalDropProperties().getAdditionalEndermanDropChance())
             {
                 generatedLoot.add(new ItemStack(Items.ENDER_PEARL, random.nextIntBetweenInclusive(0, 1)));
             }

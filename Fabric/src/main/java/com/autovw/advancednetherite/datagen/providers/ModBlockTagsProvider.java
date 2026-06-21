@@ -24,39 +24,39 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider
     protected void addTags(HolderLookup.Provider arg)
     {
         // Mod block tags
-        valueLookupBuilder(ModTags.NETHERITE_BLOCKS)
-                .add(ModBlocks.NETHERITE_IRON_BLOCK)
-                .add(ModBlocks.NETHERITE_GOLD_BLOCK)
-                .add(ModBlocks.NETHERITE_EMERALD_BLOCK)
-                .add(ModBlocks.NETHERITE_DIAMOND_BLOCK);
+        tag(ModTags.NETHERITE_BLOCKS)
+                .add(ModBlocks.NETHERITE_IRON_BLOCK.properties().blockId())
+                .add(ModBlocks.NETHERITE_GOLD_BLOCK.properties().blockId())
+                .add(ModBlocks.NETHERITE_EMERALD_BLOCK.properties().blockId())
+                .add(ModBlocks.NETHERITE_DIAMOND_BLOCK.properties().blockId());
 
-        valueLookupBuilder(ModTags.INCORRECT_FOR_NETHERITE_IRON_TOOL)
+        tag(ModTags.INCORRECT_FOR_NETHERITE_IRON_TOOL)
                 //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
         ;
-        valueLookupBuilder(ModTags.INCORRECT_FOR_NETHERITE_GOLD_TOOL)
+        tag(ModTags.INCORRECT_FOR_NETHERITE_GOLD_TOOL)
                 //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
         ;
-        valueLookupBuilder(ModTags.INCORRECT_FOR_NETHERITE_EMERALD_TOOL)
+        tag(ModTags.INCORRECT_FOR_NETHERITE_EMERALD_TOOL)
                 //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
         ;
-        valueLookupBuilder(ModTags.INCORRECT_FOR_NETHERITE_DIAMOND_TOOL)
+        tag(ModTags.INCORRECT_FOR_NETHERITE_DIAMOND_TOOL)
                 //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
         ;
 
 
         // Vanilla block tags
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(ModTags.NETHERITE_BLOCKS);
-        valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
+        tag(BlockTags.BEACON_BASE_BLOCKS)
                 .addTag(ModTags.NETHERITE_BLOCKS);
-        valueLookupBuilder(BlockTags.GUARDED_BY_PIGLINS)
-                .add(ModBlocks.NETHERITE_GOLD_BLOCK);
-        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        tag(BlockTags.GUARDED_BY_PIGLINS)
+                .add(ModBlocks.NETHERITE_GOLD_BLOCK.properties().blockId());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .addTag(ModTags.NETHERITE_BLOCKS);
 
 
         // Common block tags
-        valueLookupBuilder(FabricModTags.COMMON_NETHERITE_BLOCKS)
+        tag(FabricModTags.COMMON_NETHERITE_BLOCKS)
                 .addTag(ModTags.NETHERITE_BLOCKS);
     }
 }

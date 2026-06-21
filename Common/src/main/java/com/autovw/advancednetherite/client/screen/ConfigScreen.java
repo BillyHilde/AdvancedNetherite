@@ -57,7 +57,7 @@ public class ConfigScreen extends Screen
 
         // Back button
         addRenderableWidget(Button.builder(CommonComponents.GUI_BACK, onPress -> {
-            this.minecraft.setScreen(this.parent);
+            this.minecraft.gui.setScreen(this.parent);
         }).pos(width / 2 - 75, height - 29).size(150, 20).build());
     }
 
