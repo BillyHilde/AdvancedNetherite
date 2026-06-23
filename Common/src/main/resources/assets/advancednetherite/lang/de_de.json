@@ -54,30 +54,30 @@
   "item.advancednetherite.netherite_emerald_sword": "Netherit-Smaragdschwert",
   "item.advancednetherite.netherite_diamond_sword": "Netherit-Diamantschwert",
 
-  "item.advancednetherite.netherite_iron_spear": "Netherit-Eisennspeer",
+  "item.advancednetherite.netherite_iron_spear": "Netherit-Eisenspeer",
   "item.advancednetherite.netherite_gold_spear": "Netherit-Goldspeer",
   "item.advancednetherite.netherite_emerald_spear": "Netherit-Smaragdspeer",
   "item.advancednetherite.netherite_diamond_spear": "Netherit-Diamantspeer",
 
-  "itemGroup.advancednetherite.tab": "Fortgeschrittenes Netherit",
+  "itemGroup.advancednetherite.tab": "Advanced Netherite",
   
   "tooltip.advancednetherite.armor.enderman_passive": "%s Wenn getragen, passiv gegen Endermen",
   "tooltip.advancednetherite.armor.piglin_passive": "%s Wenn getragen, passiv gegen Piglins",
   "tooltip.advancednetherite.armor.phantom_passive": "%s Wenn getragen, passiv gegen Phantome",
 
-  "tooltip.advancednetherite.hoe.additional_crop_drops": "%s Wahrscheinlichkeit zusätzliche Samen beim Abbau von ausgewachsenen Pflanzen zu erhalten",
+  "tooltip.advancednetherite.hoe.additional_crop_drops": "%s Chance auf zusätzliche Ernteerträge beim Abbau von ausgewachsenen Pflanzen",
 
-  "tooltip.advancednetherite.pickaxe.additional_diamond_drop": "%s Wahrscheinlichkeit zusätzlichen Diamanten beim Abbau von Diamanterzen zu erhalten",
-  "tooltip.advancednetherite.pickaxe.additional_emerald_drop": "%s Wahrscheinlichkeit zusätzlichen Smaragd beim Abbau von Smaragderzen zu erhalten",
-  "tooltip.advancednetherite.pickaxe.additional_gold_drop": "%s Wahrscheinlichkeit zusätzliches Rohgold beim Abbau von Golderzen zu erhalten",
-  "tooltip.advancednetherite.pickaxe.additional_iron_drop": "%s Wahrscheinlichkeit zusätzliches Roheisen beim Abbau von Eisenerzen zu erhalten",
+  "tooltip.advancednetherite.pickaxe.additional_diamond_drop": "%s Chance auf zusätzlichen Diamanten beim Abbau von Diamanterzen",
+  "tooltip.advancednetherite.pickaxe.additional_emerald_drop": "%s Chance auf zusätzlichen Smaragd beim Abbau von Smaragderzen",
+  "tooltip.advancednetherite.pickaxe.additional_gold_drop": "%s Chance auf zusätzliches Rohgold beim Abbau von Golderzen",
+  "tooltip.advancednetherite.pickaxe.additional_iron_drop": "%s Chance auf zusätzliches Roheisen beim Abbau von Eisenerzen",
 
-  "tooltip.advancednetherite.sword.additional_enderman_mob_drop": "%s Wahrscheinlichkeit zusätzliche Enderperle beim töten eines Endermans zu erhalten",
-  "tooltip.advancednetherite.sword.additional_piglin_mob_drop": "%s Wahrscheinlichkeit zusätzliches Goldbarren beim töten eines Piglins zu erhalten",
-  "tooltip.advancednetherite.sword.additional_zombified_piglin_mob_drop": "%s Wahrscheinlichkeit zusätzliche Goldklumpen beim töten eines zombifizierten Piglins zu erhalten",
-  "tooltip.advancednetherite.sword.additional_phantom_mob_drop": "%s Wahrscheinlichkeit zusätzliche Phantomhaut beim töten eines Phantoms zu erhalten",
+  "tooltip.advancednetherite.sword.additional_enderman_mob_drop": "%s Chance auf zusätzliche Enderperle beim Töten eines Endermans",
+  "tooltip.advancednetherite.sword.additional_piglin_mob_drop": "%s Chance auf zusätzlichen Goldbarren beim Töten eines Piglins",
+  "tooltip.advancednetherite.sword.additional_zombified_piglin_mob_drop": "%s Chance auf zusätzliche Goldklumpen beim Töten eines zombifizierten Piglins",
+  "tooltip.advancednetherite.sword.additional_phantom_mob_drop": "%s Chance auf zusätzliche Phantomhaut beim Töten eines Phantoms",
 
-  "tooltip.advancednetherite.misc.press_shift_key": "Halte %s gedrückt, um alle Vorteile zu sehen",
+  "tooltip.advancednetherite.misc.press_shift_key": "Halte %s gedrückt, um alle Vorteile anzuzeigen",
   "tooltip.advancednetherite.misc.shift": "[UMSCHALT]",
   "tooltip.advancednetherite.misc.plus": "+",
 
@@ -85,7 +85,7 @@
   "advancements.advancednetherite.husbandry.netherite_diamond_hoe.description": "Stelle eine Netherit-Diamanthacke her und suche anschließend einen Psychologen auf",
   "advancements.advancednetherite.nether.netherite_iron_armor.title": "Keine Phantome mehr",
   "advancements.advancednetherite.nether.netherite_iron_armor.description": "Besorge dir eine komplette Netherit-Eisenrüstung",
-  "advancements.advancednetherite.nether.netherite_gold_armor.title": "Ultimative Pilglin-Ablenkungsrüstung",
+  "advancements.advancednetherite.nether.netherite_gold_armor.title": "Ultimative Piglin-Ablenkungsrüstung",
   "advancements.advancednetherite.nether.netherite_gold_armor.description": "Besorge dir eine komplette Netherit-Goldrüstung",
   "advancements.advancednetherite.nether.netherite_emerald_armor.title": "Endermen?",
   "advancements.advancednetherite.nether.netherite_emerald_armor.description": "Besorge dir eine komplette Netherit-Smaragdrüstung",
@@ -93,7 +93,7 @@
   "advancements.advancednetherite.nether.netherite_diamond_armor.description": "Besorge dir eine komplette Netherit-Diamantrüstung",
   "advancements.advancednetherite.nether.obtain_netherite_iron_ingot.title": "Aufwertung!",
   "advancements.advancednetherite.nether.obtain_netherite_iron_ingot.description": "Beschaffe einen Netherit-Eisenbarren",
-  "advancements.advancednetherite.nether.obtain_netherite_diamond_block.title": "Ein seht teurer Block",
+  "advancements.advancednetherite.nether.obtain_netherite_diamond_block.title": "Ein sehr teurer Block",
   "advancements.advancednetherite.nether.obtain_netherite_diamond_block.description": "Beschaffe einen Netherit-Diamantblock",
 
   "config.advancednetherite.client": "Client config",
