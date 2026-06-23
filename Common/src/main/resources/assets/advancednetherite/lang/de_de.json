@@ -61,9 +61,9 @@
 
   "itemGroup.advancednetherite.tab": "Advanced Netherite",
   
-  "tooltip.advancednetherite.armor.enderman_passive": "%s Wenn getragen, passiv gegen Endermen",
-  "tooltip.advancednetherite.armor.piglin_passive": "%s Wenn getragen, passiv gegen Piglins",
-  "tooltip.advancednetherite.armor.phantom_passive": "%s Wenn getragen, passiv gegen Phantome",
+  "tooltip.advancednetherite.armor.enderman_passive": "%s Besänftigt Endermen beim Tragen",
+  "tooltip.advancednetherite.armor.piglin_passive": "%s Besänftigt Piglins beim Tragen",
+  "tooltip.advancednetherite.armor.phantom_passive": "%s Besänftigt Phantome beim Tragen",
 
   "tooltip.advancednetherite.hoe.additional_crop_drops": "%s Chance auf zusätzliche Ernteerträge beim Abbau von ausgewachsenen Pflanzen",
 
